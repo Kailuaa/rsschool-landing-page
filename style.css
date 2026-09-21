@@ -15,6 +15,10 @@
     /* margin-inline: auto; */
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: var(--bg);    
 }
@@ -89,6 +93,10 @@ span.accent {
 .nav {
     display: flex;
     gap: 40px;
+}
+
+.nav a {
+    color: var(--txt-dark); 
 }
 
 .header-actions {   
@@ -390,6 +398,97 @@ ul.contacts {
     gap: 4px;
 }
 
-/* -------------- Адаптивы --------------  */
+/* -------------- Каталог --------------  */
+.menu-offer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 40px;
+}
 
+.menu-offer h2 {
+    width: 800px;
+}
+
+.menu-tabs {
+    display: flex;
+    gap: 16px;
+}
+
+.btn-menu {
+    border-radius: 100px;
+    border: 1px solid var(--border-primary);
+    padding: 8px 16px 8px 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: transparent;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    background-color: var(--border-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-menu.active {
+    background-color: #665F55;
+    color: var(--bg);
+}
+
+.icon.active {
+    background-color: var(--bg);
+}
+
+.menu-preview {
+    border: 1px solid var(--border-primary);
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    height: 506px;
+}
+
+.menu-preview img {
+    border-radius: 40px;
+    width: 310px;
+    height: 310px;
+}
+
+.menu-description {
+    padding: 20px;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.menu-description h3 {
+    color: var(--txt-primary);
+}
+
+.menu-title {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+}
+
+.menu-container {
+    margin-bottom: 100px;
+}
+
+
+/* -------------- Адаптивы --------------  */
+@media (max-width: 768px) {}
+@media (max-width: 380px) {}
 
