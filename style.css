@@ -1,0 +1,395 @@
+:root {
+    --txt-accent: #B0907A;
+    --txt-primary: #403F3D;
+    --bg: #E1D4C9;
+    --txt-dark: #403F3D;
+    --border-primary: #C1B6AD;
+    --border-inverse: #665F55;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    max-width: 1360px;
+    /* margin-inline: auto; */
+}
+
+body {
+    background-color: var(--bg);    
+}
+
+a {
+    text-decoration: none;
+    color: var(--txt-dark); 
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    object-fit: cover;
+}
+
+button {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 150%;
+    font-size: 16px;
+    color: var(--txt-dark);
+    /* background-color: var(--bg); */
+}
+
+/* -------------- TEXT --------------  */
+body {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 150%;
+  font-size: 16px;
+  color: var(--txt-primary); 
+}
+
+h1 {
+    font-size: 72px;
+    font-weight: 600;
+    line-height:  105%;
+}
+
+h2 {
+    font-size: 60px;
+    font-weight: 600;
+    line-height:  125%;
+    text-align: center;
+}
+
+h3 {
+    font-size: 24px;
+    font-weight: 600;
+    line-height:  125%;
+}
+
+span.accent {
+    color: var(--txt-accent);
+    font-style: italic;
+}
+
+/* ---------------- header ----------------- */
+.header {
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav {
+    display: flex;
+    gap: 40px;
+}
+
+.header-actions {   
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+
+.theme-switch {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 88px;
+    height: 44px;
+    border: 1px solid var(--border-primary);
+    border-radius: 100px;
+}
+
+.btn.light {
+    background-color: var(--txt-accent);
+    width: 36px;
+    height: 36px;
+    border-radius: 100%;
+    margin: 3px 0 3px 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+}
+
+.btn.dark {
+    width: 36px;
+    height: 36px;
+    border-radius: 100%;
+    margin: 3px 3px 3px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: transparent;
+}
+
+.btn.menu {
+    border: none;
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+    background-color: transparent;
+}
+
+.moon path {
+    fill: #403F3D;
+}
+.cup path {
+    stroke: #403F3D;
+}
+
+
+/* ---------------- hero ----------------- */
+.hero-container {
+    background-image: url("images/img-hero.jpg");
+    background-size: cover;
+    background-position: center;  
+    width: 100%;
+    height: 644px; 
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 100px;    
+}
+
+.hero-offer {
+    margin-left: 100px;
+    max-width: 530px;
+    display: flex;
+    gap: 40px;
+    flex-direction: column;
+    color: var(--bg);
+}
+
+.btn.primary {
+    padding: 20px 78px;
+    width: 200px;
+    border: none;
+    border-radius: 100px;
+    background-color: var(--bg);
+}
+
+/* -------------- Favorite --------------  */
+.favorite-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-bottom: 100px;
+}
+
+.favorite-slider-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.favorite-slider {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.slide-content {
+    width: 480px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.slide-content h3 {
+    color: var(--txt-primary);
+    text-align: center;
+}
+
+.slide-description {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+}
+
+.btn.favorite {
+    width: 60px;
+    height: 60px;
+    border: 1px solid var(--border-inverse);
+    border-radius: 100px;
+    background-color: var(--bg);
+}
+
+.favorite-controls {
+    display: flex;
+    gap: 12px;
+}
+
+.control-dot {
+    display: block;
+    width: 40px;
+    height: 2px;
+    background-color: var(--border-primary);
+}
+
+.control-dot.active {
+    display: block;
+    width: 40px;
+    height: 2px;
+    background-color: var(--border-inverse);
+}
+
+/* -------------- About --------------  */
+.about-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-bottom: 100px;
+}
+
+.about-container h2 {
+    width: 100%;
+    text-align: left;
+}
+
+.about-images {
+    display: flex;
+    gap: 40px;
+    width: 100%;
+    max-width: 660px;
+    border-radius: 20px;
+}
+
+.about-images-col {
+    display: flex;
+    gap: 40px;
+    flex-direction: column;
+}
+
+.about-big {
+    height: 590px;
+    width: 660px;
+    border-radius: 20px;
+}
+
+.about-small {
+    height: 430px;
+    width: 660px;
+    border-radius: 20px;
+}
+
+/* -------------- Mobileapp --------------  */
+.mobileapp-container {
+    display: flex;
+    gap: 100px;
+    margin-bottom: 100px;
+    align-items: center;
+}
+
+.mobileapp-offer {
+    display: flex;
+    gap: 40px;
+    flex-direction: column;
+}
+
+.mobileapp-offer h2 {
+    text-align: left;
+}
+
+.mobileapp-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.btn.mobileapp {
+    width: 200px;
+    display: flex;
+    gap: 8px;
+    border: 1px solid var(--border-inverse);
+    border-radius: 100px;
+    background-color: var(--bg);
+    align-items: center;
+    justify-content: center;
+    padding: 20px 12px;
+}
+
+.mobileapp-txt {
+    display: flex;
+    gap: 2px;
+    flex-direction: column;
+    text-align: left;
+    line-height: 105%;
+}
+
+.app path {
+    fill: var(--txt-primary);
+}
+
+.app {
+    width: 36px;
+    height: 36px;
+}
+
+.caption {
+    font-size: 10px;
+}
+
+/* -------------- Footer --------------  */
+.footer-container {
+    background-color: #665F55;
+    padding: 100px;
+    display: flex;
+    gap: 100px;
+    align-items: center;
+}
+
+.footer-offer, .footer-contacts, ul.contacts {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 40px;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 12px;
+}
+
+.btn.footer-social {
+    width: 60px;
+    height: 60px;
+    background-color: transparent;
+    border: 1px solid var(--bg);
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.socials {
+    fill: none;
+}
+
+footer h2, h3, a {
+    color: var(--bg);
+    text-align: left;
+}
+
+ul.contacts {
+    gap: 16px;
+}
+
+.contacts a {
+    display: flex;
+    gap: 4px;
+}
+
+/* -------------- Адаптивы --------------  */
+
+
