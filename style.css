@@ -61,7 +61,7 @@ body.dark-theme {
 
 a {
     text-decoration: none;
-    color: var(--txt-dark); 
+    color: var(--txt-primary); 
 }
 a:hover {
     text-decoration: underline;
@@ -210,6 +210,26 @@ body.dark-theme .btn.light:hover {
     stroke: var(--txt-primary);
 }
 
+.burger {
+    display: none;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border: 1px solid var(--border-inverse);
+    border-radius: 100px;
+    background-color: transparent;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.burger span {
+    width: 16px;
+    height: 1.5px;
+    background-color: var(--txt-primary);
+}
+
 /* ---------------- hero ----------------- */
 .hero-container {
     background-image: url("images/img-hero.jpg");
@@ -282,11 +302,19 @@ body.dark-theme .btn.light:hover {
     justify-content: space-between;
 }
 
+.favorite-rawslider {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .slide-content {
-    width: 480px;
+    max-width: 480px;
     display: flex;
     flex-direction: column;
     gap: 20px;
+    width: 100%;
 }
 
 .slide-content h3 {
@@ -362,17 +390,18 @@ body.dark-theme .btn.light:hover {
     display: flex;
     gap: 40px;
     flex-direction: column;
+    width: 100%;
 }
 
 .about-big {
     height: 590px;
-    width: 660px;
+    max-width: 660px;
     border-radius: 20px;
 }
 
 .about-small {
     height: 430px;
-    width: 660px;
+    max-width: 660px;
     border-radius: 20px;
 }
 
@@ -388,6 +417,11 @@ body.dark-theme .btn.light:hover {
     display: flex;
     gap: 40px;
     flex-direction: column;
+    width: 100%;
+}
+
+.mobileapp-container img {
+    width: 100%;
 }
 
 .mobileapp-offer h2 {
@@ -440,6 +474,11 @@ body.dark-theme .btn.light:hover {
 }
 
 /* -------------- Footer --------------  */
+footer {
+    width: 100%;
+    max-width: 1360px;
+}
+
 .footer-container {
     background-color: var(--bg-container);
     border-radius: 40px;
@@ -504,16 +543,19 @@ ul.contacts {
 }
 
 /* -------------- catalog --------------  */
+.menu {
+    width: 100%;
+}
 .menu-offer {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 40px;
-    margin-bottom: 40px;
 }
 
-.menu-offer h2 {
-    width: 800px;
+.menu-offer h1 {
+    max-width: 800px;
+    text-align: center;
 }
 
 .menu-tabs {
@@ -524,11 +566,22 @@ ul.contacts {
 .btn-menu {
     border-radius: 100px;
     border: 1px solid var(--border-primary);
+    color: var(--txt-primary);
     padding: 8px 16px 8px 8px;
     display: flex;
     align-items: center;
     gap: 8px;
     background-color: transparent;
+    text-decoration: none;
+}
+.btn-menu:hover {
+    cursor: pointer;
+    text-decoration: none;
+    background-color: var(--bg-container);
+    color: var(--txt-inverse);
+}
+.btn-menu:hover .icon {
+    background-color: var(--bg-page);
 }
 
 .icon {
@@ -543,7 +596,7 @@ ul.contacts {
 
 .btn-menu.active {
     background-color: var(--bg-container);
-    color: var(--bg-page);
+    color: var(--txt-inverse);
 }
 
 .icon.active {
@@ -560,7 +613,7 @@ ul.contacts {
 
 .menu-preview img {
     border-radius: 40px;
-    width: 310px;
+    width: 100%;
     height: 310px;
 }
 
@@ -572,8 +625,10 @@ ul.contacts {
     justify-content: space-between;
 }
 
-.menu-description h3 {
+.menu-description h2 {
     color: var(--txt-primary);
+    font-size: 24px;
+    text-align: start;
 }
 
 .menu-title {
@@ -590,10 +645,110 @@ ul.contacts {
 
 .menu-container {
     margin-bottom: 100px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.menu-more {
+    display: none;
+    width: 60px;
+    height: 60px;
+    border: 1px solid var(--border-inverse);
+    border-radius: 100px;
+    background-color: transparent;   
+    align-items: center;
+    justify-content: center;
+}
+.menu-more svg path {
+    stroke: var(--txt-primary);
+}
+
+/* -------------- Адаптивы --------------  */
+@media (max-width: 768px) {
+    body {
+        padding: 0 20px;
+    }
+
+    .nav, .btn.menu {
+        display: none
+    }
+    .burger {
+        display: flex;
+    }
+
+    .hero-offer {
+        margin-left: 60px;
+    }
+
+    .about-images, .mobileapp-container, .footer-container {
+        flex-direction: column;
+    }
+    .footer-container {
+        align-items: flex-start;
+    }
+
+    .about-small {
+        display: none;
+    }
+
+    .menu-grid .menu-preview:nth-child(n + 5) {
+        display: none;
+    }
+    .menu-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .menu-more {
+        display: block;
+    }
+
 }
 
 
-/* -------------- Адаптивы --------------  */
-@media (max-width: 768px) {}
-@media (max-width: 380px) {}
+@media (max-width: 380px) {
+    h1 {
+        font-size: 42px;
+        font-weight: 600;
+        line-height:  115%;
+    }
+
+    h2 {
+        font-size: 32px;
+        font-weight: 600;
+        line-height:  125%;
+    }
+
+    .header-actions {
+        gap: 12px;
+    }
+
+    .svg-cup {
+        opacity: 1;
+    }
+    .btn.menu.primary {
+        padding: 20px 68px;
+    }
+
+    .btn.favorite {
+        display: none;
+    }
+    .hero-offer {
+        margin: 0;
+    }
+
+    .hero-container {
+        padding: 60px 16px;
+    }
+
+    .footer-container {
+        padding: 60px 16px;
+        gap: 40px;
+    }
+    
+    .menu-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
 
