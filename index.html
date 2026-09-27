@@ -16,12 +16,29 @@
     <header>
         <nav class="container header">
             <a href="index.html"><img src="icons/logo-light.svg" alt="Logo" class="logo"></a>
-            <ul class="nav">
+            <ul class="nav main">
                 <li><a href="#favorite">Favorite coffee</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#mobileapp">Mobile app</a></li>
-                <li><a href="#contacts">Contact us</a></li>   
+                <li><a href="#contacts">Contact us</a></li>
             </ul>
+            <div class="burger-menu">
+                <ul class="nav">
+                    <li><a href="#favorite">Favorite coffee</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#mobileapp">Mobile app</a></li>
+                    <li><a href="#contacts">Contact us</a></li>
+                </ul>
+                <a href="menu.html" class="btn menu mobile">
+                    Menu
+                    <svg class="cup" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14.166 9.76667V11.6667C14.166 14.8883 11.5543 17.5 8.33268 17.5C5.11102 17.5 2.49935 14.8883 2.49935 11.6667V9.76667C2.49935 9.4353 2.76798 9.16667 3.09935 9.16667H13.566C13.8974 9.16667 14.166 9.4353 14.166 9.76667Z" stroke="#E1D4C9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M9.99935 7.50002C9.99935 6.66669 10.5946 5.83335 11.7851 5.83335C13.1 5.83335 14.166 4.76737 14.166 3.4524V2.91669" stroke="#E1D4C9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M6.66732 7.5V7.08333C6.66732 5.70262 7.78661 4.58333 9.16732 4.58333C10.0878 4.58333 10.834 3.83714 10.834 2.91667V2.5" stroke="#E1D4C9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M13.334 9.16669H15.4173C16.5679 9.16669 17.5007 10.0994 17.5007 11.25C17.5007 12.4006 16.5679 13.3334 15.4173 13.3334H14.1673" stroke="#E1D4C9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+            </div>
             <div class="header-actions">
                 <div class="theme-switch">
                     <button class="btn light">
@@ -35,7 +52,7 @@
                         </svg>
                     </button>
                 </div>
-                <a href="coffee.html" class="btn menu">
+                <a href="menu.html" class="btn menu">
                     Menu
                     <svg class="cup" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M14.166 9.76667V11.6667C14.166 14.8883 11.5543 17.5 8.33268 17.5C5.11102 17.5 2.49935 14.8883 2.49935 11.6667V9.76667C2.49935 9.4353 2.76798 9.16667 3.09935 9.16667H13.566C13.8974 9.16667 14.166 9.4353 14.166 9.76667Z" stroke="#E1D4C9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -63,7 +80,7 @@
                         for coffee lovers and those seeking a warm and inviting space 
                         to enjoy their favorite beverage.
                     </p>
-                    <a href="coffee.html" class="btn menu primary">
+                    <a href="menu.html" class="btn menu primary">
                         Menu
                         <svg class="svg-cup" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M14.166 9.76667V11.6667C14.166 14.8883 11.5543 17.5 8.33268 17.5C5.11102 17.5 2.49935 14.8883 2.49935 11.6667V9.76667C2.49935 9.4353 2.76798 9.16667 3.09935 9.16667H13.566C13.8974 9.16667 14.166 9.4353 14.166 9.76667Z" stroke="#E1D4C9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -87,7 +104,7 @@
                             </svg>
                         </button>
                         <div class="favorite-rawslider">
-                            <div class="slide-content">
+                            <div class="slide-content active">
                                 <img src="images/coffee-slider-1.png" alt="coffee">
                                 <div class="slide-description">
                                     <h3>S’mores Frappuccino</h3>
@@ -97,7 +114,7 @@
                                     <h3>$5.50</h3>
                                 </div>
                             </div>
-                            <!-- <div class="slide-content">
+                            <div class="slide-content">
                                 <img src="images/coffee-slider-2.png" alt="coffee">
                                 <div class="slide-description">
                                     <h3>Caramel Macchiato</h3>
@@ -116,7 +133,7 @@
                                     </p>
                                     <h3>$4.50</h3>
                                 </div>
-                            </div> -->
+                            </div>
                         </div>
                         <button class="btn favorite next">
                             <svg class="arrow" width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
