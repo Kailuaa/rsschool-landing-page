@@ -1,0 +1,48 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+:root {
+    --txt-accent: #{$txt-accent};
+    --txt-primary: #{$txt-primary};
+    --txt-inverse: #{$txt-inverse};
+    --bg-page: #{$bg-page};
+    --bg-container: #{$bg-container};
+    --bg-overlay: #{$bg-overlay};
+    --border-primary: #{$border-primary};
+    --border-inverse: #{$border-inverse};
+    --current-color: #{$current-color};
+}
+
+.dark-theme {
+    --txt-accent: #{$dark-txt-accent};
+    --txt-primary: #{$dark-txt-primary};
+    --txt-inverse: #{$dark-txt-inverse};
+    --bg-page: #{$dark-bg-page};
+    --bg-container: #{$dark-bg-container};
+    --bg-overlay: #{$dark-bg-overlay};
+    --border-primary: #{$dark-border-primary};
+    --border-inverse: #{$dark-border-inverse};
+}
+
+body.dark-theme {
+    .btn.light {
+        background-color: transparent;
+
+        &:hover {
+            cursor: pointer;
+            background-color: var(--txt-accent);
+        }
+    }
+
+    .btn.dark {
+        background-color: var(--txt-accent);
+
+        &:hover {
+            background-color: var(--txt-accent);
+        }
+    }
+
+    .btn.footer-social:hover {
+        background-color: var(--current-color);
+    }
+}

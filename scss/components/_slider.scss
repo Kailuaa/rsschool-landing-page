@@ -1,0 +1,137 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+
+/* -------------- Favorite -------------- */
+
+.favorite-container {
+    @include flex-column();
+
+    gap: $gap-big;
+    margin-bottom: $section-margin;
+}
+
+.favorite-slider-main {
+    @include flex-column();
+
+    align-items: center;
+    gap: $gap-big;
+}
+
+
+/* -------------- Slider -------------- */
+
+.favorite-slider {
+    width: $width-full;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: $gap-medium;
+}
+
+
+/* -------------- Slider viewport -------------- */
+
+.favorite-rawslider {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+}
+
+
+/* -------------- Slider track -------------- */
+
+.slider-track {
+    display: flex;
+
+    width: 100%;
+
+    transition: transform 0.3s ease;
+}
+
+
+/* -------------- Slides -------------- */
+
+.slide-content {
+    flex: 0 0 100%;
+
+    width: 100%;
+    max-width: none;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+
+    gap: $gap-medium;
+    align-items: center;
+}
+
+
+/* -------------- Description -------------- */
+
+.slide-description {
+    @include flex-column();
+    width: 100%;
+    max-width: 480px;
+    gap: $gap-small;
+
+    h3,
+    p {
+        color: var(--txt-primary);
+        text-align: center;
+    }
+}
+
+
+/* -------------- Slider buttons -------------- */
+
+.btn.favorite {
+    @include border(var(--border-inverse));
+    @include round-button();
+
+    flex-shrink: 0;
+
+    .arrow path {
+        stroke: var(--txt-primary);
+    }
+
+    &:hover {
+        cursor: pointer;
+        background-color: var(--border-inverse);
+
+        .arrow path {
+            stroke: var(--bg-page);
+        }
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+        display: none;
+    }
+}
+
+
+/* -------------- Slider controls -------------- */
+
+.favorite-controls {
+    @include align-center();
+
+    gap: $gap-small;
+
+    .control-dot {
+        display: block;
+
+        width: 40px;
+        height: 2px;
+
+        cursor: pointer;
+
+        background-color: var(--border-primary);
+
+        transition: background-color $transition-base;
+
+        &.active {
+            background-color: var(--border-inverse);
+        }
+    }
+}

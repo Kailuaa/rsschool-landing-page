@@ -1,0 +1,32 @@
+@use "../abstracts/variables" as *;
+
+@mixin align-center {
+    display: flex;
+    align-items: center;
+}
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    @include align-center();
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin transition {
+    transition: all $transition-base;
+}
+
+@mixin round-button {
+    width: 60px;
+    height: 60px;
+    border-radius: $border-radius-round;
+    background-color: transparent;
+}
+
+@mixin border($color) {
+    border: 1px solid $color;
+}

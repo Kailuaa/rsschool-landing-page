@@ -1,0 +1,146 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.modal {
+    width: $width-full;
+    z-index: 2000;
+    inset: 0;
+    background-color: $dark-bg-overlay;
+    display: none;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+
+    &.open {
+        display: flex;
+    }
+}
+
+.modal-content {
+    max-width: 800px;
+    padding: 16px;
+    border-radius: $border-radius-medium;
+    background-color: var(--bg-page);
+    max-height: calc(100vh - 40px);
+    overflow-y: auto;
+    
+    h2 {
+        font-size: $font-size-h3;
+        text-align: left;
+    }
+}
+
+.modal-preview {
+    display: flex;
+    
+    img {
+        max-width: 310px;
+        max-height: 310px;
+        border-radius: $border-radius-medium;
+    }
+
+    @media (max-width: $breakpoint-tablet) {
+        max-width: 656px;
+    }
+}
+
+.modal-description {
+    @include flex-column();
+    gap: $gap-big;
+    padding-left: 20px;;
+}
+
+.modal-options {
+    @include flex-column();
+    gap: $gap-tiny;
+    
+    .modal-tabs {
+        display: flex;
+        flex-wrap: wrap;
+        gap: $gap-tiny;
+    }
+}
+
+.modal-total {
+    display: flex;
+    gap: $gap-medium;
+    justify-content: space-between;
+
+    &.price {
+    text-align: right;
+}
+}
+
+.modal-alert {
+    display: flex;
+    padding: 12px 0;
+    gap: $gap-tiny;
+    border-top: 1px solid var(--border-primary);
+    
+    svg {
+        width: 16px;
+        height: 16px;
+        flex-shrink: 0;
+    }
+    
+    p {
+        font-size: $font-size-small !important;
+    }
+}
+
+.btn-option {
+    border-radius: $border-radius-round;
+    color: $txt-primary;
+    padding: 8px 16px 8px 8px;
+    @include align-center();
+    @include border($border-primary);
+    gap: $gap-tiny;
+    background-color: transparent;
+    text-decoration: none;
+
+    &.active {
+        background-color: $bg-container;
+        color: $txt-inverse;
+    }
+
+    &:hover {
+        cursor: pointer;
+        text-decoration: none;
+        background-color: $bg-container;
+        color: $txt-inverse;
+
+        .modal-icon  {
+            background-color: $bg-page;
+            color: $txt-primary;
+        }
+    }
+
+    .modal-icon {
+        width: 30px;
+        height: 30px;
+        border-radius: 100%;
+        background-color: $border-primary;
+        @include flex-center();
+    
+        &.active {
+            background-color: var(--bg-page);
+            color: var(--txt-primary);
+        } 
+    }
+}
+
+.modal-btn {
+    border-radius: $border-radius-round;
+    @include border($dark-border-primary);
+    background-color: transparent;
+    color: var(--txt-primary);
+    padding: 10px 78px;
+    
+    &:hover {
+        cursor: pointer;
+        background-color: var(--bg-container);
+        color: var(--txt-inverse);
+    }
+}
+
+

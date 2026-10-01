@@ -1,4 +1,5 @@
-// theme switcher
+
+// ------------ theme switcher ------------
 const lightBtn = document.querySelector(".light");
 const darkBtn = document.querySelector(".dark");
 const logo = document.querySelector(".logo");
@@ -23,10 +24,3 @@ if (savedTheme === "dark") {
     document.body.classList.remove("dark-theme");
     logo.src = "icons/logo-light.svg";
 }
-
-// slider
-const slides = document.querySelectorAll(".slide-content");
-const next = document.querySelector(".next");
-const prev = document.querySelector(".prev");
-const dots = document.querySelectorAll(".control-dot");
-

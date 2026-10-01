@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">     
     <title>Coffee House</title>     
-    <link rel="icon" type="image/svg+xml" href="icons/logo-light.svg">  
-    <link rel="stylesheet" href="style.css">   
+    <link rel="icon" type="image/svg+xml" href="icons/logo-light.svg">   
+    <link rel="stylesheet" href="css/main.css">   
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
@@ -15,12 +15,29 @@
     <header>
         <nav class="container header">
             <a href="index.html"><img src="icons/logo-light.svg" alt="Logo" class="logo"></a>
-            <ul class="nav">
-                <li><a href="#favorite">Favorite coffee</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#mobileapp">Mobile app</a></li>
-                <li><a href="#contacts">Contact us</a></li>   
+            <ul class="nav main">
+                <li><a href="index.html#favorite">Favorite coffee</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#mobileapp">Mobile app</a></li>
+                <li><a href="#contacts">Contact us</a></li>
             </ul>
+            <div class="burger-menu">
+                <ul class="nav">
+                    <li><a href="index.html#favorite">Favorite coffee</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#mobileapp">Mobile app</a></li>
+                    <li><a href="#contacts">Contact us</a></li>
+                </ul>
+                <a href="menu.html" class="btn menu mobile">
+                    Menu
+                    <svg class="cup" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14.166 9.76667V11.6667C14.166 14.8883 11.5543 17.5 8.33268 17.5C5.11102 17.5 2.49935 14.8883 2.49935 11.6667V9.76667C2.49935 9.4353 2.76798 9.16667 3.09935 9.16667H13.566C13.8974 9.16667 14.166 9.4353 14.166 9.76667Z" stroke="#E1D4C9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M9.99935 7.50002C9.99935 6.66669 10.5946 5.83335 11.7851 5.83335C13.1 5.83335 14.166 4.76737 14.166 3.4524V2.91669" stroke="#E1D4C9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M6.66732 7.5V7.08333C6.66732 5.70262 7.78661 4.58333 9.16732 4.58333C10.0878 4.58333 10.834 3.83714 10.834 2.91667V2.5" stroke="#E1D4C9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M13.334 9.16669H15.4173C16.5679 9.16669 17.5007 10.0994 17.5007 11.25C17.5007 12.4006 16.5679 13.3334 15.4173 13.3334H14.1673" stroke="#E1D4C9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+            </div>
             <div class="header-actions">
                 <div class="theme-switch">
                     <button class="btn light">
@@ -34,7 +51,7 @@
                         </svg>
                     </button>
                 </div>
-                <a href="coffee.html" class="btn menu">
+                <a href="menu.html" class="btn menu">
                     Menu
                     <svg class="cup" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M14.166 9.76667V11.6667C14.166 14.8883 11.5543 17.5 8.33268 17.5C5.11102 17.5 2.49935 14.8883 2.49935 11.6667V9.76667C2.49935 9.4353 2.76798 9.16667 3.09935 9.16667H13.566C13.8974 9.16667 14.166 9.4353 14.166 9.76667Z" stroke="#E1D4C9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -43,71 +60,35 @@
                         <path d="M13.334 9.16669H15.4173C16.5679 9.16669 17.5007 10.0994 17.5007 11.25C17.5007 12.4006 16.5679 13.3334 15.4173 13.3334H14.1673" stroke="#E1D4C9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                 </a>
+                <button class="burger" aria-label="Open menu">
+                    <span></span>
+                    <span></span>
+                </button>   
             </div>
         </nav>
     </header> 
 
     <main>
-        <section class="menu">
+        <section class="container menu">
             <div class="menu-container">
                 <div class="menu-offer">
                     <h1>Behind each of our cups hides an <span class="accent">amazing surprise</span></h1>
                     <div class="menu-tabs">
-                        <a href="coffee.html" class="btn-menu">
+                        <button class="btn-menu active" data-category="coffee">
                             <span class="icon active">☕</span>
                             Coffee
-                        </a>
-                        <a href="tea.html" class="btn-menu active">
+                        </button>
+                        <button class="btn-menu" data-category="tea">
                             <span class="icon">🫖</span>
                             Tea
-                        </a>
-                        <a href="dessert.html" class="btn-menu">
+                        </button>
+                        <button class="btn-menu" data-category="dessert">
                             <span class="icon">🍰</span>
                             Dessert
-                        </a>                
+                        </button>                
                     </div>
                 </div>
                 <div class="menu-grid">
-                    <div class="menu-preview">
-                        <img class="preview" src="images/tea-1.png" alt="">
-                        <div class="menu-description">
-                            <div class="menu-title">
-                                <h2>Moroccan</h2>
-                                <p>Fragrant black tea with the addition of tangerine, cinnamon, honey, lemon and mint</p>
-                            </div>
-                            <h2>$$4.50</h2>
-                        </div>
-                    </div>
-                    <div class="menu-preview">
-                        <img class="preview" src="images/tea-2.png" alt="">
-                        <div class="menu-description">
-                            <div class="menu-title">
-                                <h2>Ginger</h2>
-                                <p>Original black tea with fresh ginger, lemon and honey</p>
-                            </div>
-                            <h2>$5.00</h2>
-                        </div>
-                    </div>
-                    <div class="menu-preview">
-                        <img class="preview" src="images/tea-3.png" alt="">
-                        <div class="menu-description">
-                            <div class="menu-title">
-                                <h2>Cranberry</h2>
-                                <p>Invigorating black tea with cranberry and honey</p>
-                            </div>
-                            <h2>$5.00</h2>
-                        </div>
-                    </div>
-                    <div class="menu-preview">
-                        <img class="preview" src="images/tea-4.png" alt="">
-                        <div class="menu-description">
-                            <div class="menu-title">
-                                <h2>Sea buckthorn</h2>
-                                <p>Toning sweet black tea with sea buckthorn, fresh thyme and cinnamon</p>
-                            </div>
-                            <h2>$5.50</h2>
-                        </div>
-                    </div>
                 </div>
                 <button class="menu-more">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -153,6 +134,8 @@
             </div>
         </div>
     </footer>
-    <script src="script.js"></script>
+    <section class="modal">        
+    </section>
+    <script type="module" src="./js/main.js"></script>
 </body>
 </html>

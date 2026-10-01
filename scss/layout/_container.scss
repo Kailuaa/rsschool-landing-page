@@ -1,0 +1,8 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.container {
+    width: $width-full;
+    max-width: $container-width;
+    margin: 0 auto;
+}

@@ -1,0 +1,110 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: $width-full;
+    z-index: 1000;
+    background-color: var(--bg-page);
+}
+
+.header {
+    margin: 20px auto;
+    // max-width: 1360px; прописано в контейнере
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav {
+    display: flex;
+    gap: 40px;
+
+    a {
+        color: var(--txt-primary);
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &.main {
+        @media (max-width: $breakpoint-tablet) {
+            display: none;
+        }
+    }
+}
+
+.header-actions {
+    @include align-center();
+    gap: 24px;
+
+    @media (max-width: $breakpoint-mobile) {
+        gap: 12px;
+    }
+}
+
+.btn.menu {
+    border: none;
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+    background-color: transparent;
+    color: var(--txt-primary);
+
+    @media (max-width: $breakpoint-tablet) {
+        display: none;
+    }   
+}
+
+.theme-switch {
+    @include flex-center();
+    gap: 8px;
+    width: 88px;
+    height: 44px;
+    border: 1px solid var(--border-primary);
+    border-radius: $border-radius-round;
+
+    .btn {
+        width: 36px;
+        height: 36px;
+        border-radius: $border-radius-round;
+        @include flex-center();
+        border: none;
+
+        &.light {
+            margin: 3px 0 3px 3px;
+            background-color: var(--txt-accent);
+        }
+
+        &.dark {
+            margin: 3px 3px 3px 0;
+            background-color: transparent;
+
+            &:hover {
+                cursor: pointer;
+                background-color: var(--txt-primary);
+
+                .moon path {
+                    fill: var(--txt-inverse);
+                }
+            }
+        }
+    }
+}
+
+.moon path {
+    fill: var(--txt-primary);
+}
+
+.cup path {
+    stroke: var(--txt-primary);
+}
+
+@media (max-width: $breakpoint-tablet) {
+    .svg-cup {
+        opacity: 1;
+    }
+}
