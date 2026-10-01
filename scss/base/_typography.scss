@@ -1,0 +1,38 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+h1 {
+    font-size: $font-size-h1;
+    font-weight: $font-weight-semibold;
+    line-height:  $line-height-large-heading;
+
+    @media (max-width: $breakpoint-mobile) {
+        font-size: 42px;
+        font-weight: 600;
+        line-height:  115%;
+    }
+}
+
+h2 {
+    font-size: $font-size-h2;
+    font-weight: $font-weight-semibold;
+    line-height:  $line-height-heading;
+    text-align: center;
+    
+    @media (max-width: $breakpoint-mobile) {
+        font-size: 32px;
+        font-weight: 600;
+        line-height:  125%;
+    }
+}
+
+h3 {
+    font-size: $font-size-h3;
+    font-weight: $font-weight-semibold;
+    line-height:  $line-height-heading;
+}
+
+span.accent {
+    color: $txt-accent;
+    font-style: italic;
+}
